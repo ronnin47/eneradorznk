@@ -32,14 +32,14 @@ export const App=()=> {
   return (
     
     <>
-    <div style={{display:"grid", gridAutoColumns:"1fr",placeItems:"center"}}>
+    <div style={{display:"grid", gridTemplateColumns:"1fr",placeItems:"center"}}>
     <div>
       {checkNatura && checkDominio? (<Carta dominio={checkDominio} naturaleza={checkNatura}></Carta>): 
       <p className='mensajeAp animate__animated animate__fadeInTopLeft'>{mensajeApertura}</p>
     }
     </div>
     
-    <div style={{margin:"1.5em"}} className='animate__animated animate__fadeInTopLeft'>
+    <div style={{margin:"1em"}} className='animate__animated animate__fadeInTopLeft'>
      
       <div style={{ display: "flex", placeItems: "center" }}>
         <Naturalezas checkNatura={checkNatura} setCheckNatura={setCheckNatura}></Naturalezas>
@@ -47,7 +47,7 @@ export const App=()=> {
       <p style={{ color: "aliceblue"}}>Naturaleza</p>
     </div>
 
-    <div style={{margin:"1em"}} className='animate__animated animate__fadeInTopRight'>
+    <div style={{margin:"0.5em"}} className='animate__animated animate__fadeInTopRight'>
       
       <div style={{ display: "flex", placeItems: "center" }}>
         <Dominios checkDominio={checkDominio} setCheckDominio={setCheckDominio}></Dominios>
